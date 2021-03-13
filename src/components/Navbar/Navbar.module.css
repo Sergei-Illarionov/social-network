@@ -1,0 +1,18 @@
+.nav {
+    background-color: #02194c;
+    grid-area: n;
+    border: 1px solid #d7edfb;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 1px 5px 5px 0 #d7edfb;
+
+}
+
+.item a {
+    color: darkgray;
+    text-decoration: none;
+}
+
+.item a.activeLink {
+    color: white;
+}
