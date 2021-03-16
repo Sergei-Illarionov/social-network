@@ -7,13 +7,13 @@ const Navbar = () => {
         <nav className={style.nav}>
 
             <div className={style.item}>
-                <a>News</a>
+                <a href="/Profile">Profile</a>
             </div>
             <div className={style.item}>
-                <a>Music</a>
+                <a href="/Messages">Messages</a>
             </div>
             <div className={style.item}>
-                <a>Settings</a>
+                <a href="/Settings">Settings</a>
             </div>
         </nav>
     )

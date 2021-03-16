@@ -1,10 +1,54 @@
-.item {
-    color: white;
+.item_myText {
+    top: 50%;
+    left: 50%;
+    display: flex;
+
 }
-.item img {
+
+.image img {
     vertical-align: middle;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    margin-right: 10px;
+    margin: 50% 10px 10px;
+}
+
+.speech_bubble {
+    position: relative;
+    border-radius: 5px 5px 5px 0;
+    background-color: black;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.speech_bubble:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right-color: black;
+    border-left: 0;
+    border-bottom: 0;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+.message_name {
+    color: #c8ccdb;
+}
+.text {
+    color: white;
+}
+
+
+.like {
+    float: right;
+    font-size: x-small;
+    color: #00aeff;
+    background-color: black;
+    border: none;
+    outline: none;
 }
