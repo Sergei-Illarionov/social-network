@@ -1,10 +1,15 @@
 import React from "react";
 import Post from "./Post/Post";
 import style from "./MyPosts.module.css"
+import {PostType} from "../../../redux/state";
+
+type myPostsPropsType = {
+    posts: Array<PostType>
+}
 
 
-const MyPosts = () => {
-
+const MyPosts = (props:myPostsPropsType) => {
+    let postsElements = props.posts.map(post => <Post message={post.message} name={post.message} />)
 
     return (
         <div className={style.postsBlock}>
@@ -17,8 +22,7 @@ const MyPosts = () => {
                 </div>
             </div>
             <div className={style.posts}>
-                <Post name="Sergei" message="Hi, how are you?" />
-                <Post name="Maria" message="It's my first post" />
+                {postsElements}
             </div>
 
         </div>

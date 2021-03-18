@@ -1,23 +1,21 @@
 import React from "react";
 import MyPosts from "./MyPosts/MyPosts";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
+import {ProfilePageType} from "../../redux/state";
+
+type ProfileType = {
+    profilePage: ProfilePageType
+}
 
 
 
 
-const Profile = () => {
+const Profile = (props: ProfileType) => {
 
     return (
         <div>
-            <div>
-                <img
-                    src="https://d9me64que7cqs.cloudfront.net/images/common/background-generic-landscape-short.31b43a7823e13c6383e5e613b04b5b58.jpg"
-                    alt="logo"/>
-            </div>
-            <div>
-                ava + description
-            </div>
-            <MyPosts/>
-
+            <ProfileInfo/>
+            <MyPosts posts={props.profilePage.posts}/>
         </div>
     )
 }
