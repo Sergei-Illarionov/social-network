@@ -1,18 +1,17 @@
-import React, {useState} from "react";
+import React from "react";
 import style from "./Post.module.css"
 
 
-type PostPropsType = {
-    name: string
-    message: string
+export type PostPropsType = {
 
+    message: string
+likesCount: number
 
 }
 
 
 const Post = (props: PostPropsType) => {
-    const [count, setCount] = useState(0)
-    const onLikeClickHandler = () => setCount(count + 1)
+
     return (
 
         <div className={style.item_myText}>
@@ -23,9 +22,9 @@ const Post = (props: PostPropsType) => {
                     alt="Avatar"/>
             </div>
             <div className={style.speech_bubble}>
-                <div className={style.message_name}>{props.name}</div>
+
                 <div className={style.text}>{props.message}</div>
-                <button className={style.like} onClick={onLikeClickHandler}>like {count}</button>
+                <button className={style.like}>like {props.likesCount} </button>
 
             </div>
 
